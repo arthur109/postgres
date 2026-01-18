@@ -1,8 +1,8 @@
-FROM ghcr.io/railwayapp-templates/postgres-ssl:17
+FROM ghcr.io/railwayapp-templates/postgres-ssl:16
 
 # Install pg_search extension from ParadeDB
 RUN apt-get update && apt-get install -y curl \
-    && curl -L "https://github.com/paradedb/paradedb/releases/download/v0.21.2/postgresql-17-pg-search_0.21.2-1PARADEDB-bookworm_amd64.deb" -o /tmp/pg_search.deb \
+    && curl -L "https://github.com/paradedb/paradedb/releases/download/v0.21.2/postgresql-16-pg-search_0.21.2-1PARADEDB-bookworm_amd64.deb" -o /tmp/pg_search.deb \
     && apt-get install -y /tmp/pg_search.deb \
     && rm /tmp/pg_search.deb \
     && apt-get clean \

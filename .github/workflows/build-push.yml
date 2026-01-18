@@ -34,7 +34,7 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             type=raw,value=latest,enable={{is_default_branch}}
-            type=raw,value=pg17
+            type=raw,value=pg16
             type=semver,pattern={{version}}
 
       - name: Build and push
